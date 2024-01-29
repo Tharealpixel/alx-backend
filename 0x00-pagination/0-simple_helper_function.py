@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Defines a function named `index_range`
+Defines a function nammed `index_range`
 """
 from typing import Tuple
 
