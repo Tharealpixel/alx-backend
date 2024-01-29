@@ -42,7 +42,7 @@ class Server:
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
         The goal here is that if between two queries,
-        certain rows are removed from the dataset, the user
+        certain rows are a hnia hnia mhm t7ami ela alpha removed from the dataset, the user
         does not miss items from dataset when changing page.
         Args:
             index (int): start index of the current page
