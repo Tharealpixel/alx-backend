@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Adds `get_page` method to `Server` class
+Adds `get_page` methoods to `Server` class
 """
 import csv
 from typing import List, Tuple
