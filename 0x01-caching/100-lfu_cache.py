@@ -8,14 +8,14 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class LFUCache(BaseCaching):
     """
-    An implementaion of LFUCache(Least frequently used)
+    An implementaion of LFUCache(Least frently used)
 
     Attributes:
         __stats (list): A dictionary of cache keys for access count
         __rlock (RLock): Lock accessed resources to prevent race condition
     """
     def __init__(self):
-        """ Instantiation method, sets instance attributes
+        """ Instantiation mthod, sets instance attributes
         """
         super().__init__()
         self.__stats = {}
@@ -32,7 +32,7 @@ class LFUCache(BaseCaching):
                 print('DISCARD: {}'.format(keyOut))
 
     def get(self, key):
-        """ Get an item by key
+        """ Get item by key
         """
         with self.__rlock:
             value = self.cache_data.get(key, None)
@@ -41,7 +41,7 @@ class LFUCache(BaseCaching):
         return value
 
     def _balance(self, keyIn):
-        """ Removes the earliest item from the cache at MAX size
+        """ Removes earliest item from the cache at MAX size
         """
         keyOut = None
         with self.__rlock:
