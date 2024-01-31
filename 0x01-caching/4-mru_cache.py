@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""MRU Cache Replacement Implementation Class
+"""MRU Cache Replacement Implentation Class
 """
 from threading import RLock
 
@@ -8,7 +8,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class MRUCache(BaseCaching):
     """
-    An implementation of MRU(Most Recently Used) Cache
+    An implementation of MRU(Most Rectly Used) Cache
 
     Attributes:
         __keys (list): Stores cache keys from least to most accessed
@@ -22,7 +22,7 @@ class MRUCache(BaseCaching):
         self.__rlock = RLock()
 
     def put(self, key, item):
-        """ Add an item in the cache
+        """ Add item in the cache
         """
         if key is not None and item is not None:
             keyOut = self._balance(key)
@@ -32,7 +32,7 @@ class MRUCache(BaseCaching):
                 print('DISCARD: {}'.format(keyOut))
 
     def get(self, key):
-        """ Get an item by key
+        """ Get item by key
         """
         with self.__rlock:
             value = self.cache_data.get(key, None)
@@ -41,7 +41,7 @@ class MRUCache(BaseCaching):
         return value
 
     def _balance(self, keyIn):
-        """ Removes the earliest item from the cache at MAX size
+        """ Removes earliest item from the cache at MAX size
         """
         keyOut = None
         with self.__rlock:
