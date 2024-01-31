@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Basic Cache implementation Class
+"""Basic Cache implemntation Class
 """
 BaseCaching = __import__('base_caching').BaseCaching
 
@@ -18,6 +18,6 @@ class BasicCache(BaseCaching):
             self.cache_data.update({key: item})
 
     def get(self, key):
-        """ Get an item by key
+        """ Get item by key
         """
         return self.cache_data.get(key, None)
