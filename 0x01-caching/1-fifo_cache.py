@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""FIFO Cache Replacement Implementation Class
+"""FIFO Cache Replacement Implementation Class blocks
 """
 from threading import RLock
 
@@ -32,13 +32,13 @@ class FIFOCache(BaseCaching):
                 print('DISCARD: {}'.format(keyOut))
 
     def get(self, key):
-        """ Get an item by key
+        """ Get item by key
         """
         with self.__rlock:
             return self.cache_data.get(key, None)
 
     def _balance(self, keyIn):
-        """ Removes the oldest item from the cache at MAX size
+        """ Removes oldest item from the cache at MAX size
         """
         keyOut = None
         with self.__rlock:
