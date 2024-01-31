@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""LIFO Cache Replacement Implementation Class
+"""LIFO Cache Replacement Implentation Class
 """
 from threading import RLock
 
@@ -8,10 +8,10 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class LIFOCache(BaseCaching):
     """
-    An implementation of LIFO(Last In Fisrt Out) Cache
+    An implementation of LIFOLast In Fisrt Out) Cache
 
     Attributes:
-        __keys (list): Stores cache keys in order of entry using `.append`
+        __keys (list): Stores che keys in order of entry using `.append`
         __rlock (RLock): Lock accessed resources to prevent race condition
     """
     def __init__(self):
