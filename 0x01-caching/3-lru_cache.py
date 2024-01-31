@@ -8,7 +8,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class LRUCache(BaseCaching):
     """
-    An implementation of LRU(Last Recently Used) Cache
+    An implementation of LRU(Last Recely Used) Cache
 
     Attributes:
         __keys (list): Stores cache keys from least to most accessed
